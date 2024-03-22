@@ -8,7 +8,14 @@ public class AnswerField : MonoBehaviour
     [SerializeField] TMP_Text answerenter;
     [SerializeField] int maxlenght;
 
-    public void AddChar(int entereddigit)
+    public string Answer
+    {
+        get
+        {
+            return answerenter.text;
+        }
+    }
+    public void AddDigit(int entereddigit)
     {
         
         if (answerenter.text.Length + 1> maxlenght)
@@ -22,7 +29,7 @@ public class AnswerField : MonoBehaviour
         }
     }
 
-    public void RemoveChar()
+    public void RemoveDigit()
     {
         string lastanswer = "";
         for (int i = 0; i < answerenter.text.Length - 1; i++)

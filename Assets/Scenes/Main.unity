@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ApplyAnimation: 1
   inputfield: {fileID: 7459770702228119291}
+  QuestionText: {fileID: 1805912419}
 --- !u!1 &424119680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1680,34 @@ PrefabInstance:
     - target: {fileID: 6329176110749638174, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
       propertyPath: m_Name
       value: Keyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 290001042}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ApplyAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InLevelScripty, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531606996781017848, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6582857347705364577, guid: e1a7d29e9d53fe547b81861f47e5a9e6, type: 3}
       propertyPath: m_AnchoredPosition.x

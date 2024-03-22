@@ -1,0 +1,22 @@
+[
+  {
+    "QuestionString": "15 + 34 = 612\n33 + 82 = 616\n54 + 73 =?",
+    "Answer": "921",
+    "Formula": "(x+y)(z.t)"
+  },
+  {
+    "QuestionString": "X + X = 6\nY + X = 14\nY + Z = 16\nZ=?",
+    "Answer": "5",
+    "Formula": "X=3 Y=11 Z=5"
+  },
+  {
+    "QuestionString": "73 + 11 = 2\n23 + 76 = 1\n54 + 30 = 2\n13 + 20 =1",
+    "Answer": "1",
+    "Formula": "AB + CD = xy   x/y=?"
+  },
+  {
+    "QuestionString": "",
+    "Answer": "",
+    "Formula": ""
+  }
+]

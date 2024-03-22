@@ -9,7 +9,7 @@ public class Keyboard : MonoBehaviour
 
     public void AddDigit(int number)
     {
-        input.AddChar(number);
+        input.AddDigit(number);
     }
 
     public void ResetAnswer()
@@ -19,6 +19,6 @@ public class Keyboard : MonoBehaviour
 
     public void RemoveChar()
     {
-        input.RemoveChar();
+        input.RemoveDigit();
     }
 }
