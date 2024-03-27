@@ -4,60 +4,84 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using TMPro;
 
-public class InLevelScripty : PanelBehaviour
+public class InLevelScript : PanelBehaviour
 {
+    public int CurrentquestionIndex
+    {
+        get => PlayerPrefs.GetInt("currentquestion", 0);
+        set => PlayerPrefs.SetInt("currentquestion", value);
+    }
+    public Question CurrentQuestion => QuestionManager.Questions[CurrentquestionIndex];
+    public static InLevelScript instance { get; private set; }
+    RuntimeAnimatorController SelfAnim;
+    #region Editor Fields
     [SerializeField] AnswerField inputfield;
-    [SerializeField] TMPro.TMP_Text QuestionText;
-    public static InLevelScripty instance { get; private set; }
-    int currentquestion = 0;
-    List<Question> questions;
+    [SerializeField] TMP_Text QuestionText;
+    [SerializeField] Animator animator;
+    #endregion
+
     private void Start()
     {
         instance = this;
-        questions = JsonConvert.DeserializeObject<List<Question>>(ReadJson());
+        SelfAnim = Resources.Load<RuntimeAnimatorController>("inlevel");
     }
     public override void BeforeOpening()
     {
         inputfield.ResetAnswer();
-        QuestionText.text = questions[currentquestion].QuestionString;
+        QuestionText.text = CurrentQuestion.QuestionString;
     }
-    public static string ReadJson()
-    {
 
-        string sFilePath = Path.Combine(Application.streamingAssetsPath, "Questions.json");
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            UnityWebRequest www = UnityWebRequest.Get(sFilePath);
-            www.SendWebRequest();
-            while (!www.isDone) ;
-            return www.downloadHandler.text;
-        }
-        return File.ReadAllText(sFilePath);
-
-    }
     public void ApplyAnswer()
     {
-        if (inputfield.Answer == questions[currentquestion].Answer)
+        if (inputfield.Answer == CurrentQuestion.Answer)
         {
-            currentquestion++;
-            if (currentquestion == questions.Count)
+            CurrentquestionIndex++;
+            if (CurrentquestionIndex == QuestionManager.Questions.Count)
             {
                 Debug.Log("Soru Bitti");
+                CurrentquestionIndex = QuestionManager.Questions.Count - 1;
+                return;
             }
             else
             {
-                ReFreshPanel();
+                StartCoroutine(NextQuestion());
+                IEnumerator NextQuestion()
+                {
+                    animator.Play("Trans");
+                    yield return new WaitForSeconds(0.3f);
+                    ReFreshPanel();
+                }
             }
         }
         else
         {
-            Debug.Log("Yanlis Cevap");
+
+            StartCoroutine(WrongAnswer());
+
+            IEnumerator WrongAnswer()
+            {
+                inputfield.Shake();
+                yield return new WaitForSeconds(0.3f);
+                inputfield.ResetAnswer();
+            }
         }
     }
+
     public override void ReFreshPanel()
     {
-        QuestionText.text = questions[currentquestion].QuestionString;
+
+        QuestionText.text = CurrentQuestion.QuestionString;
         inputfield.ResetAnswer();
+    }
+    public override void AfterOpening()
+    {
+        StartCoroutine(SwapRuntimeAnimator());
+        IEnumerator SwapRuntimeAnimator()
+        {
+            yield return new WaitForSeconds(0.2f);
+            animator.runtimeAnimatorController = SelfAnim;
+        }
     }
 }

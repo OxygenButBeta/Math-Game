@@ -68,7 +68,6 @@ public class PanelController : SingleBehaviour
                         animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Logo");
                         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
                     }
-
             }
             else
                 PBs?.AfterClosing();

@@ -89,8 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0853ef85f2a9410459f648a84d061106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answerenter: {fileID: 506578261594233273}
+  AnswerTMP: {fileID: 506578261594233273}
   maxlenght: 10
+  animator: {fileID: 0}
 --- !u!1 &9154534910926103456
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,42 +5,23 @@ using TMPro;
 
 public class AnswerField : MonoBehaviour
 {
-    [SerializeField] TMP_Text answerenter;
+    [SerializeField] TMP_Text AnswerTMP;
     [SerializeField] int maxlenght;
+    [SerializeField] Animator animator;
 
-    public string Answer
-    {
-        get
-        {
-            return answerenter.text;
-        }
-    }
+    public void Shake() => animator.Play("shake");
+    public string Answer => AnswerTMP.text;
     public void AddDigit(int entereddigit)
     {
-        
-        if (answerenter.text.Length + 1> maxlenght)
-        {
-
-        }
-
-        else
-        {
-            answerenter.text += entereddigit;
-        }
+        if (!(AnswerTMP.text.Length + 1 > maxlenght))
+            AnswerTMP.text += entereddigit;
     }
 
     public void RemoveDigit()
     {
-        string lastanswer = "";
-        for (int i = 0; i < answerenter.text.Length - 1; i++)
-        {
-            lastanswer += answerenter.text[i];
-        }
-        answerenter.text = lastanswer;
+        if (AnswerTMP.text.Length > 0)
+            AnswerTMP.text = AnswerTMP.text.Substring(0, AnswerTMP.text.Length - 1);
     }
 
-    public void ResetAnswer()
-    {
-        answerenter.text = "";
-    }
+    public void ResetAnswer() => AnswerTMP.text = string.Empty;
 }
