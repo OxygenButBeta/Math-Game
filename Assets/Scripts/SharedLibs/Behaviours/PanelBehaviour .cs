@@ -129,12 +129,13 @@ namespace UnityEngine
         /// </summary>
         /// <param name="TargetPanel"></param>
         /// <param name="Caller"></param>
-        public void OpenSingleOverride(string TargetPanel, string Caller)
+        public void OpenSingleOverride(string TargetPanel, string Caller, object Arg = null)
         {
             SetActive(Caller, false);
-            SetActive(TargetPanel, true).Caller = Caller;
+            var PB = SetActive(TargetPanel, true);
+            PB.Caller = Caller;
+            PB.CheckArgument(Arg);
         }
-
         /// <summary>
         /// This method closes the current panel
         /// </summary>

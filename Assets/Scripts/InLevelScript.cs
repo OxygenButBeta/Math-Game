@@ -20,6 +20,7 @@ public class InLevelScript : PanelBehaviour
     [SerializeField] AnswerField inputfield;
     [SerializeField] TMP_Text QuestionText;
     [SerializeField] Animator animator;
+    [SerializeField] TMP_Text LevelText;
     #endregion
 
     private void Start()
@@ -30,6 +31,9 @@ public class InLevelScript : PanelBehaviour
     public override void BeforeOpening()
     {
         inputfield.ResetAnswer();
+        if (CurrentquestionIndex > QuestionManager.QuestionCount)
+            CurrentquestionIndex = 0;
+
         QuestionText.text = CurrentQuestion.QuestionString;
     }
 
@@ -37,6 +41,7 @@ public class InLevelScript : PanelBehaviour
     {
         if (inputfield.Answer == CurrentQuestion.Answer)
         {
+            QuestionManager.AddCompletedQuestion(CurrentquestionIndex);
             CurrentquestionIndex++;
             if (CurrentquestionIndex == QuestionManager.Questions.Count)
             {
@@ -46,13 +51,9 @@ public class InLevelScript : PanelBehaviour
             }
             else
             {
+                QuestionManager.AddCompletedQuestion(CurrentquestionIndex);
                 StartCoroutine(NextQuestion());
-                IEnumerator NextQuestion()
-                {
-                    animator.Play("Trans");
-                    yield return new WaitForSeconds(0.3f);
-                    ReFreshPanel();
-                }
+
             }
         }
         else
@@ -68,10 +69,21 @@ public class InLevelScript : PanelBehaviour
             }
         }
     }
-
+    IEnumerator NextQuestion()
+    {
+        animator.Play("Trans");
+        yield return new WaitForSeconds(0.3f);
+        ReFreshPanel();
+    }
+    public override void CheckArgument(object args)
+    {
+        CurrentquestionIndex = (int)args;
+        Debug.Log("Target Level " + CurrentquestionIndex);
+        ReFreshPanel();
+    }
     public override void ReFreshPanel()
     {
-
+        LevelText.text = $"Question {CurrentquestionIndex + 1}";
         QuestionText.text = CurrentQuestion.QuestionString;
         inputfield.ResetAnswer();
     }

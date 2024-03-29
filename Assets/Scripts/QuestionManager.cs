@@ -4,19 +4,54 @@ using System.IO;
 using UnityEngine.Networking;
 using UnityEngine;
 using Newtonsoft.Json;
+using System.Linq;
 
 public static class QuestionManager
 {
     static List<Question> m_questions;
+    public static int QuestionCount => Questions.Count;
+    public static int[] ComplatedQuestions
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(ComplatedQuestionsKey))
+                return new int[0];
+
+            return Array.ConvertAll(ComplatedQuestionsKey.Split(';'), int.Parse);
+        }
+        set
+        {
+            ComplatedQuestionsKey = string.Join(';', value);
+        }
+    }
     public static List<Question> Questions
     {
         get
         {
             if (m_questions == null)
+            {
                 m_questions = JsonConvert.DeserializeObject<List<Question>>(ReadJson());
+                Debug.Log("Total Number Of Questions " + m_questions.Count);
+            }
             return m_questions;
 
         }
+    }
+    public static void AddCompletedQuestion(int questionIndex)
+    {
+        var complatedQuestions = ComplatedQuestions.ToList();
+        complatedQuestions.Add(questionIndex);
+        ComplatedQuestions = complatedQuestions.ToArray();
+    }
+    public static bool IsQuestionUnlocked(int questionIndex)
+    {
+        if (questionIndex == 0) return true;
+        return ComplatedQuestions.Contains(questionIndex - 1);
+    }
+    private static string ComplatedQuestionsKey
+    {
+        get => PlayerPrefs.GetString("ComplatedQuestions", string.Empty);
+        set => PlayerPrefs.SetString("ComplatedQuestions", value);
     }
     static string ReadJson()
     {
