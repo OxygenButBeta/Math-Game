@@ -1,22 +1,53 @@
 [
   {
-    "QuestionString": "15 + 34 = 612\n33 + 82 = 616\n54 + 73 =?",
-    "Answer": "921",
-    "Formula": "(x+y)(z.t)"
+    "QuestionString": "3,6,9,?",
+    "Answer": "12",
+    "Formula": "x,x.2,x.3,x.4"
   },
   {
-    "QuestionString": "X + X = 6\nY + X = 14\nY + Z = 16\nZ=?",
-    "Answer": "5",
-    "Formula": "X=3 Y=11 Z=5"
+    "QuestionString": "2,5,11,?",
+    "Answer": "23",
+    "Formula": "x,x+(x+1)..."
   },
   {
-    "QuestionString": "73 + 11 = 2\n23 + 76 = 1\n54 + 30 = 2\n13 + 20 =1",
+    "QuestionString": "16,18,10,?,9,7",
     "Answer": "1",
-    "Formula": "AB + CD = xy   x/y=?"
+    "Formula": "ab,cd,ef,e+f,c+d,a+b"
   },
   {
-    "QuestionString": "Istanbulun Plakası?",
-    "Answer": "34",
-    "Formula": ""
+    "QuestionString": "18,13,11,?,5,2,5",
+    "Answer": "6",
+    "Formula": "a,a-b,a-b-d,X,y,d,b"
+  },
+  {
+    "QuestionString": "5,9,17,?",
+    "Answer": "33",
+    "Formula": "x,x+x-1,..."
+  },
+  {
+    "QuestionString": "10=1\n86=14\n72=9\n18=?",
+    "Answer": "9",
+    "Formula": "ab=a+b"
+  },
+  {
+    "QuestionString": "26=286\n18=198\n15=165\n72=?",
+    "Answer": "792",
+    "Formula": "ab=a,a+b,b"
+  },
+  {
+    "QuestionString": "55=250\n81=87\n73=214\n54=?",
+    "Answer": "201",
+    "Formula": "ab=a.b,a-b"
+  },
+  {
+    "QuestionString": "73=410\n52=37\n21=13\n62=?",
+    "Answer": "48",
+    "Formula": "ab=a-b,a+b"
+  },
+  {
+    "QuestionString": "73=3\n18=8\n25=1\n92=?",
+    "Answer": "9",
+    "Formula": "ab=a.b=>xy\nx+y"
   }
+
 ]
