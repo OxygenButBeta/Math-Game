@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelSelectMenu : PanelBehaviour
 {
 
     LevelSelector[] Selecters;
-    private void Start() => Selecters = GetComponentsInChildren<LevelSelector>();
-
     public override void BeforeOpening()
     {
+        Selecters = GetComponentsInChildren<LevelSelector>();
         Debug.Log("Syncing..");
         foreach (var item in Selecters)
-            item.Sync();
+            if(item != null)
+                if(!item.IsDestroyed())
+            item?.Sync();
+
     }
 }
