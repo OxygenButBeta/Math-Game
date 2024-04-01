@@ -48,6 +48,36 @@
     "QuestionString": "73=3\n18=8\n25=1\n92=?",
     "Answer": "9",
     "Formula": "ab=a.b=>xy\nx+y"
+  },
+  {
+    "QuestionString": "5+3=53\n8+8=88\n2+5=25\n7+3=?",
+    "Answer": "73",
+    "Formula": "a+b=ab"
+  },
+  {
+    "QuestionString": "73+21=213\n84+35=328\n18+54=89\n62+27=?",
+    "Answer": "129",
+    "Formula": "ab+cd=a.b,c+d"
+  },
+  {
+    "QuestionString": "2+6=40\n5+8=89\n3+5=34\n8+7=?",
+    "Answer": "113",
+    "Formula": "a+b= a.a+b.b"
+  },
+  {
+    "QuestionString": "23+73=15\n15+62=14\n19+28=11\n90+8=?",
+    "Answer": "17",
+    "Formula": "a+b=xy x+y=?"
+  },
+  {
+    "QuestionString": "22+62=2\n31+11=2\n52+41=3\n65+34=?",
+    "Answer": "1",
+    "Formula": "a+b=xy x+y=?"
+  },
+  {
+    "QuestionString": "ABCD=3628\nCDBA=2863\nBACD=6328\nDACB=?",
+    "Answer": "8326",
+    "Formula": "A=3 B=6\nC=2 D=8"
   }
 
 ]
