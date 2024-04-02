@@ -28,6 +28,7 @@ public class InLevelScript : PanelBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
         instance = this;
     }
     public override void BeforeOpening()

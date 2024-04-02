@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ApplyAnimation: 1
-  AllowEveryAnswer: 1
+  AllowEveryAnswer: 0
   CanvasAnim: {fileID: 112050658}
   inputfield: {fileID: 7459770702228119291}
   QuestionText: {fileID: 1805912419}
