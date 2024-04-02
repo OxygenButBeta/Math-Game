@@ -1,0 +1,22 @@
+[
+  {
+    "PackageLanguage": 37,
+    "PackageStrings": {
+      "Play": "Oyna",
+	  "Question": "Soru",
+      "Settings": "Ayarlar",
+      "Online": "Çoklu Oyuncu",
+	  "QuitGame":"Oyundan çıkmak istediginize emin misiniz?"
+    }
+  },
+  {
+    "PackageLanguage": 10,
+    "PackageStrings": {
+      "Play": "Play",
+	   "Question": "Question",
+      "Settings": "Settings",
+	    "QuitGame":"Do you really wanna quit mother fucker?",
+      "Online": "Online"
+    }
+  }
+]

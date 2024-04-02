@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelSelector : PanelBehaviour
 {
+    [SerializeField] Image OutlineField;
+    [SerializeField] Color UnlockedClr;
+    [SerializeField] Color LockedClr;
+    [SerializeField] Color ComplatedClr;
+    [SerializeField] TMP_Text LevelText;
     [SerializeField] int QuestionID;
     Button btn;
     private void Start()
@@ -14,6 +21,7 @@ public class LevelSelector : PanelBehaviour
             Destroy(gameObject);
             return;
         }
+        LevelText.text = (QuestionID + 1).ToString();
         btn = gameObject.GetOrAddComponent<Button>();
         btn.onClick.AddListener(() =>
         {
@@ -26,8 +34,17 @@ public class LevelSelector : PanelBehaviour
     }
     public void Sync()
     {
-        if (btn is not null)
-            btn.interactable = QuestionManager.IsQuestionUnlocked(QuestionID);
+        if (QuestionManager.IsQuestionUnlocked(QuestionID))
+        {
+            btn.interactable = true;
+            OutlineField.color = QuestionManager.ComplatedQuestions.Contains(QuestionID) ? ComplatedClr : UnlockedClr;
+        }
+        else
+        {
+            btn.interactable = false;
+            OutlineField.color = LockedClr;
+        }
+
     }
 
 

@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InLevelScript : PanelBehaviour
 {
@@ -15,8 +16,10 @@ public class InLevelScript : PanelBehaviour
     }
     public Question CurrentQuestion => QuestionManager.Questions[CurrentquestionIndex];
     public static InLevelScript instance { get; private set; }
-    RuntimeAnimatorController SelfAnim;
+
     #region Editor Fields
+    [SerializeField] bool AllowEveryAnswer;
+    [SerializeField] Animator CanvasAnim;
     [SerializeField] AnswerField inputfield;
     [SerializeField] TMP_Text QuestionText;
     [SerializeField] Animator animator;
@@ -26,7 +29,6 @@ public class InLevelScript : PanelBehaviour
     private void Start()
     {
         instance = this;
-        SelfAnim = Resources.Load<RuntimeAnimatorController>("inlevel");
     }
     public override void BeforeOpening()
     {
@@ -39,7 +41,7 @@ public class InLevelScript : PanelBehaviour
 
     public void ApplyAnswer()
     {
-        if (inputfield.Answer == CurrentQuestion.Answer)
+        if (inputfield.Answer == CurrentQuestion.Answer || AllowEveryAnswer)
         {
             QuestionManager.AddCompletedQuestion(CurrentquestionIndex);
             CurrentquestionIndex++;
@@ -50,11 +52,7 @@ public class InLevelScript : PanelBehaviour
                 return;
             }
             else
-            {
-                QuestionManager.AddCompletedQuestion(CurrentquestionIndex);
                 StartCoroutine(NextQuestion());
-
-            }
         }
         else
         {
@@ -71,8 +69,10 @@ public class InLevelScript : PanelBehaviour
     }
     IEnumerator NextQuestion()
     {
-        animator.Play("Trans");
-        yield return new WaitForSeconds(0.3f);
+        RotateCanvas();
+        yield return new WaitForSeconds(0.15f);
+        QuestionText.text = string.Empty;
+        yield return new WaitForSeconds(0.60f);
         ReFreshPanel();
     }
     public override void CheckArgument(object args)
@@ -83,7 +83,7 @@ public class InLevelScript : PanelBehaviour
     }
     public override void ReFreshPanel()
     {
-        LevelText.text = $"Question {CurrentquestionIndex + 1}";
+        LevelText.text = LanguageManager.GetText("Question") + " " + (CurrentquestionIndex + 1);
         QuestionText.text = CurrentQuestion.QuestionString;
         inputfield.ResetAnswer();
     }
@@ -93,7 +93,11 @@ public class InLevelScript : PanelBehaviour
         IEnumerator SwapRuntimeAnimator()
         {
             yield return new WaitForSeconds(0.2f);
-            animator.runtimeAnimatorController = SelfAnim;
         }
     }
+    public void OpenHint()
+    {
+        OpenPanel("HintBox", CurrentQuestion.Formula);
+    }
+    void RotateCanvas() => CanvasAnim.Play("Rotate");
 }
