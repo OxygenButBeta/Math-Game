@@ -5,6 +5,31 @@
     "Formula": "x,x.2,x.3,x.4"
   },
   {
+    "QuestionString": "2.5-9",
+    "Answer": "1",
+    "Formula": "x.y=a\na-b"
+  },
+  {
+    "QuestionString": "A+B=40\nA-B=20\nA.B=?",
+    "Answer": "300",
+    "Formula": "A=30 B=?"
+  },
+  {
+    "QuestionString": "3=9/n5=25/n6=36/n9=?",
+    "Answer": "81",
+    "Formula": "a=a.a"
+  },
+  {
+    "QuestionString": "2,4,8/n4,5,20/n7,3,?",
+    "Answer": "21",
+    "Formula": "a,b,a.b"
+  },
+  {
+    "QuestionString": "6538,8653,3865,",
+    "Answer": "5386",
+    "Formula": "ABCD,DABC,CDAB,BCDA"
+  },
+  {
     "QuestionString": "2,5,11,?",
     "Answer": "23",
     "Formula": "x,x+(x+1)..."
@@ -78,6 +103,16 @@
     "QuestionString": "ABCD=3628\nCDBA=2863\nBACD=6328\nDACB=?",
     "Answer": "8326",
     "Formula": "A=3 B=6\nC=2 D=8"
+  },
+  {
+    "QuestionString": "ABCDE=12345\nCEDBA=38376\nCDBAE=34765\nEDCBA=?",
+    "Answer": "83376",
+    "Formula": "AB=xy BA=zt"
+  },
+  {
+    "QuestionString": "ABCDE=79824\nCBADE=73724\nEDABC=16798\nCBEDA=?",
+    "Answer": "73167",
+    "Formula": "AB=xy BA=zt"
   }
 
 ]
