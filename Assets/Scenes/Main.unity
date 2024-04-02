@@ -2367,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ApplyAnimation: 1
   hintText: {fileID: 1055579756}
-  MainCanvas: {fileID: 1055579753}
+  MainCanvas: {fileID: 112050654}
 --- !u!1 &579635828
 GameObject:
   m_ObjectHideFlags: 0

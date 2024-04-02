@@ -14,7 +14,14 @@ public class HintBox : PanelBehaviour
     {
         hintText.text = args as string;
     }
-
+    override public void BeforeOpening()
+    {
+        MainCanvas.SetActive(false);
+    }
+    override public void BeforeClosing()
+    {
+        MainCanvas.SetActive(true);
+    }
 
 
 }
