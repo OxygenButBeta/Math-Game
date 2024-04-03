@@ -31,7 +31,7 @@
   },
   {
     //seviye 1
-    "QuestionString": "6538,8653,3865,",
+    "QuestionString": "6538,8653,3865,? ",
     "Answer": "5386",
     "Formula": "ABCD,DABC,CDAB,BCDA"
   },
@@ -81,7 +81,7 @@
     //seviye 1
     "QuestionString": "7346,7335,7224,?",
     "Answer": "6113",
-    "Formula": "abcs,abcd-11,abcd-111..."
+    "Formula": "abcs,abcd-11\nabcd-111..."
   },
   {
     //seviye 1
@@ -147,7 +147,7 @@
     //seviye 2
     "QuestionString": "2,3,7,?",
     "Answer": "25",
-    "Formula": "a,b=(a.2-1),c=(b.3-2),d=(c.4-3)"
+    "Formula": "a,b=(a.2-1)\nc=(b.3-2),d=(c.4-3)"
   },
   {
     //seviye 2
@@ -169,7 +169,7 @@
   },
   {
     //seviye 2
-    "QuestionString": "24+11=15\n78+16=36\n54+19=21\n32+32",
+    "QuestionString": "24+11=15\n78+16=36\n54+19=21\n32+32=?",
     "Answer": "24",
     "Formula": "a+b=xy\nx.y=?"
   },
