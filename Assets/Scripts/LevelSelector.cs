@@ -25,6 +25,7 @@ public class LevelSelector : PanelBehaviour
         btn = gameObject.GetOrAddComponent<Button>();
         btn.onClick.AddListener(() =>
         {
+            AudioController.Instance.PlayAudio(AudioController.Audio.Load);
             Debug.Log("Opening Level " + QuestionID);
             OpenSingleOverride("inlevel", "MainMenu", QuestionID);
             PanelController.SetActive("levels", false);

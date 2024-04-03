@@ -18,10 +18,12 @@ public class LanguageSelector : LanguageSyncable
                     IsStart = false;
                     return;
                 }
+                AudioController.Instance.PlayAudio(AudioController.Audio.Click);
                 LanguageManager.SetLanguage(Target);
                 Debug.Log("Language Changed to " + Target);
             }
         });
+        IsStart = false;
         Sync();
     }
     public override void Sync()

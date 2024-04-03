@@ -44,6 +44,7 @@ public class InLevelScript : PanelBehaviour
     {
         if (inputfield.Answer == CurrentQuestion.Answer || AllowEveryAnswer)
         {
+            AudioController.Instance.PlayAudio(AudioController.Audio.True);
             QuestionManager.AddCompletedQuestion(CurrentquestionIndex);
             CurrentquestionIndex++;
             if (CurrentquestionIndex == QuestionManager.Questions.Count)
@@ -57,6 +58,7 @@ public class InLevelScript : PanelBehaviour
         }
         else
         {
+            AudioController.Instance.PlayAudio(AudioController.Audio.False);
 
             StartCoroutine(WrongAnswer());
 
