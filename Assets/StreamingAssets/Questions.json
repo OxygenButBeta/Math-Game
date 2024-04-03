@@ -1,118 +1,214 @@
 [
   {
+    //seviye 1
     "QuestionString": "3,6,9,?",
     "Answer": "12",
     "Formula": "x,x.2,x.3,x.4"
   },
   {
+    //seviye 1
     "QuestionString": "2.5-9",
     "Answer": "1",
     "Formula": "x.y=a\na-b"
   },
   {
+    //seviye 1
     "QuestionString": "A+B=40\nA-B=20\nA.B=?",
     "Answer": "300",
     "Formula": "A=30 B=?"
   },
   {
+    //seviye 1
     "QuestionString": "3=9/n5=25/n6=36/n9=?",
     "Answer": "81",
     "Formula": "a=a.a"
   },
   {
+    //seviye 1
     "QuestionString": "2,4,8/n4,5,20/n7,3,?",
     "Answer": "21",
     "Formula": "a,b,a.b"
   },
   {
+    //seviye 1
     "QuestionString": "6538,8653,3865,",
     "Answer": "5386",
     "Formula": "ABCD,DABC,CDAB,BCDA"
   },
   {
+    //seviye 1
     "QuestionString": "2,5,11,?",
     "Answer": "23",
     "Formula": "x,x+(x+1)..."
   },
   {
+    //seviye 1
+    "QuestionString": "1,4,9,16,25,36,?,64,81",
+    "Answer": "49",
+    "Formula": "a.a,b.b,c.c,d.d..."
+  },
+  {
+    //seviye 1
     "QuestionString": "16,18,10,?,9,7",
     "Answer": "1",
     "Formula": "ab,cd,ef,e+f,c+d,a+b"
   },
   {
+    //seviye 1
     "QuestionString": "18,13,11,?,5,2,5",
     "Answer": "6",
-    "Formula": "a,a-b,a-b-d,X,y,d,b"
+    "Formula": "a,a-b,a-b-d,x,y,d,b"
   },
   {
+    //seviye 1
     "QuestionString": "5,9,17,?",
     "Answer": "33",
     "Formula": "x,x+x-1,..."
   },
   {
-    "QuestionString": "10=1\n86=14\n72=9\n18=?",
-    "Answer": "9",
-    "Formula": "ab=a+b"
-  },
-  {
-    "QuestionString": "26=286\n18=198\n15=165\n72=?",
-    "Answer": "792",
-    "Formula": "ab=a,a+b,b"
-  },
-  {
-    "QuestionString": "55=250\n81=87\n73=214\n54=?",
-    "Answer": "201",
-    "Formula": "ab=a.b,a-b"
-  },
-  {
-    "QuestionString": "73=410\n52=37\n21=13\n62=?",
-    "Answer": "48",
-    "Formula": "ab=a-b,a+b"
-  },
-  {
-    "QuestionString": "73=3\n18=8\n25=1\n92=?",
-    "Answer": "9",
-    "Formula": "ab=a.b=>xy\nx+y"
-  },
-  {
-    "QuestionString": "5+3=53\n8+8=88\n2+5=25\n7+3=?",
-    "Answer": "73",
-    "Formula": "a+b=ab"
-  },
-  {
-    "QuestionString": "73+21=213\n84+35=328\n18+54=89\n62+27=?",
-    "Answer": "129",
-    "Formula": "ab+cd=a.b,c+d"
-  },
-  {
-    "QuestionString": "2+6=40\n5+8=89\n3+5=34\n8+7=?",
-    "Answer": "113",
-    "Formula": "a+b= a.a+b.b"
-  },
-  {
-    "QuestionString": "23+73=15\n15+62=14\n19+28=11\n90+8=?",
-    "Answer": "17",
-    "Formula": "a+b=xy x+y=?"
-  },
-  {
-    "QuestionString": "22+62=2\n31+11=2\n52+41=3\n65+34=?",
-    "Answer": "1",
-    "Formula": "a+b=xy x+y=?"
-  },
-  {
+    //seviye 1
     "QuestionString": "ABCD=3628\nCDBA=2863\nBACD=6328\nDACB=?",
     "Answer": "8326",
     "Formula": "A=3 B=6\nC=2 D=8"
   },
   {
+    //seviye 1
+    "QuestionString": "10=1\n86=14\n72=9\n18=?",
+    "Answer": "9",
+    "Formula": "ab=a+b"
+  },
+  {
+    //seviye 1
+    "QuestionString": "7346,7335,7224,?",
+    "Answer": "6113",
+    "Formula": "abcs,abcd-11,abcd-111..."
+  },
+  {
+    //seviye 1
+    "QuestionString": "26=286\n18=198\n15=165\n72=?",
+    "Answer": "792",
+    "Formula": "ab=a,a+b,b"
+  },
+  {
+    //seviye 1
+    "QuestionString": "55=250\n81=87\n73=214\n54=?",
+    "Answer": "201",
+    "Formula": "ab=a.b,a-b"
+  },
+  {
+    //seviye 1
+    "QuestionString": "126+244=86\n155+271=33\n240+138=56\n168+120=?",
+    "Answer": "35",
+    "Formula": "ab/c"
+  },
+  {
+    //seviye 1
+    "QuestionString": "73=410\n52=37\n21=13\n62=?",
+    "Answer": "48",
+    "Formula": "ab=a-b,a+b"
+  },
+  {
+    //seviye 1
+    "QuestionString": "5+3=53\n8+8=88\n2+5=25\n7+3=?",
+    "Answer": "73",
+    "Formula": "a+b=ab"
+  },
+  {
+    //seviye 2
+    "QuestionString": "73=3\n18=8\n25=1\n92=?",
+    "Answer": "9",
+    "Formula": "ab=a.b=>xy\nx+y"
+  },
+  {
+    //seviye 2
+    "QuestionString": "73+21=213\n84+35=328\n18+54=89\n62+27=?",
+    "Answer": "129",
+    "Formula": "ab+cd=a.b,c+d"
+  },
+  {
+    //seviye 2
+    "QuestionString": "2+6=40\n5+8=89\n3+5=34\n8+7=?",
+    "Answer": "113",
+    "Formula": "a+b= a.a+b.b"
+  },
+  {
+    //seviye 2
+    "QuestionString": "23+73=15\n15+62=14\n19+28=11\n90+8=?",
+    "Answer": "17",
+    "Formula": "a+b=xy x+y=?"
+  },
+  {
+    //seviye 2
+    "QuestionString": "22+62=2\n31+11=2\n52+41=3\n65+34=?",
+    "Answer": "1",
+    "Formula": "a+b=xy x/y=?"
+  },
+  {
+    //seviye 2
+    "QuestionString": "2,3,7,?",
+    "Answer": "25",
+    "Formula": "a,b=(a.2-1),c=(b.3-2),d=(c.4-3)"
+  },
+  {
+    //seviye 2
     "QuestionString": "ABCDE=12345\nCEDBA=38376\nCDBAE=34765\nEDCBA=?",
     "Answer": "83376",
     "Formula": "AB=xy BA=zt"
   },
   {
-    "QuestionString": "ABCDE=79824\nCBADE=73724\nEDABC=16798\nCBEDA=?",
-    "Answer": "73167",
-    "Formula": "AB=xy BA=zt"
+    //seviye 2
+    "QuestionString": "7912,7932,7952,?",
+    "Answer": "7972",
+    "Formula": "abcd,abxd,abyd,abzd\nx=c+d,y=x+d,z=y+d"
+  },
+  {
+    //seviye 2
+    "QuestionString": "2+5=14\n8+3=88\n2+3=10\n5+4=",
+    "Answer": "45",
+    "Formula": "a+b=(a+b).a"
+  },
+  {
+    //seviye 2
+    "QuestionString": "24+11=15\n78+16=36\n54+19=21\n32+32",
+    "Answer": "24",
+    "Formula": "a+b=xy\nx.y=?"
+  },
+  {
+    //seviye 2
+    "QuestionString": "13+33=12\n25+24=13\n37+12=13\n54+32=?",
+    "Answer": "22",
+    "Formula": "a+b=xy\nx=a/4 y=b/3"
+  },
+  {
+    //seviye 2
+    "QuestionString": "8,5=4\n7,3=12\n6,4=42\n8,4=?",
+    "Answer": "23",
+    "Formula": "a.b=xy =>yx"
+  },
+  {
+    //seviye 2
+    "QuestionString": "9+2=34\n25+3=59\n49+6=736\n36+4=?",
+    "Answer": "616",
+    "Formula": "√x+b.b"
+  },
+  {
+    //seviye 2
+    "QuestionString": "88+14=50\n26+5=7\n73+10=11\n53+14=?",
+    "Answer": "1",
+    "Formula": "a.b=x  x-cd"
+  },
+  {
+    //seviye 2
+    "QuestionString": "15,5=30\n23,3=15\n62,4=32\n63,6=?",
+    "Answer": "54",
+    "Formula": "a+b=x  x.c"
   }
+  //{
+  //  //
+  //  "QuestionString": "",
+  //  "Answer": "",
+  //  "Formula": ""
+  //}
+
 
 ]
