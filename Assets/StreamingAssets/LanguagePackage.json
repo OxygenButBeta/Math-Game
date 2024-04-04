@@ -1,78 +1,74 @@
 [
   {
-    "PackageLanguage": 37,
-    "PackageStrings": {
-      "Play": "Oyna",
-	  "Question": "Soru",
-      "Settings": "Ayarlar",
-      "Online": "Çoklu Oyuncu",
-	  "QuitGame":"Oyundan çıkmak istediginize emin misiniz?"
-    }
-  },
-  {
     "PackageLanguage": 10,
     "PackageStrings": {
       "Play": "Play",
-	  "Question": "Question",
+      "Question": "Question",
       "Settings": "Settings",
-	  "Online": "Multiplayer",
-	  "QuitGame":"Are you sure you want to exit the game?"
-    
+      "Online": "Multiplayer",
+      "QuitGame": "Are you sure you want to exit the game?"
+
     }
   },
-	  {
-		"PackageLanguage": 14,
-		"PackageStrings": {
-			"Play": "Jouer",
-			"Question": "Question",
-			"Settings": "Paramètres",
-			"Online": "Multijoueur",
-			"QuitGame": "Êtes-vous sûr de vouloir quitter le jeu?"
-		}
-	},
-	{
+  {
+    "PackageLanguage": 37,
+    "PackageStrings": {
+      "Play": "Oyna",
+      "Question": "Soru",
+      "Settings": "Ayarlar",
+      "Online": "Çoklu Oyuncu",
+      "QuitGame": "Oyundan çıkmak istediginize emin misiniz?"
+    }
+  },
+  {
+    "PackageLanguage": 14,
+    "PackageStrings": {
+      "Play": "Jouer",
+      "Question": "Question",
+      "Settings": "Paramètres",
+      "Online": "Multijoueur",
+      "QuitGame": "Êtes-vous sûr de vouloir quitter le jeu?"
+    }
+  },
+  {
     "PackageLanguage": 30,
     "PackageStrings": {
-        "Play": "Играть",
-        "Question": "Вопрос",
-        "Settings": "Настройки",
-        "Online": "Мультиплеер",
-        "QuitGame": "Вы уверены, что хотите выйти из игры?"
+      "Play": "Играть",
+      "Question": "Вопрос",
+      "Settings": "Настройки",
+      "Online": "Мультиплеер",
+      "QuitGame": "Вы уверены, что хотите выйти из игры?"
     }
-},
-{
+  },
+  {
     "PackageLanguage": 15,
     "PackageStrings": {
-        "Play": "Spielen",
-        "Question": "Frage",
-        "Settings": "Einstellungen",
-        "Online": "Mehrspieler",
-        "QuitGame": "Möchten Sie das Spiel wirklich beenden?"
+      "Play": "Spielen",
+      "Question": "Frage",
+      "Settings": "Einstellungen",
+      "Online": "Mehrspieler",
+      "QuitGame": "Möchten Sie das Spiel wirklich beenden?"
     }
-},
-{
+  },
+  {
     "PackageLanguage": 21,
     "PackageStrings": {
-        "Play": "Gioca",
-        "Question": "Domanda",
-        "Settings": "Impostazioni",
-        "Online": "Multigiocatore",
-        "QuitGame": "Sei sicuro di voler uscire dal gioco?"
+      "Play": "Gioca",
+      "Question": "Domanda",
+      "Settings": "Impostazioni",
+      "Online": "Multigiocatore",
+      "QuitGame": "Sei sicuro di voler uscire dal gioco?"
     }
-},
-{
+  },
+  {
     "PackageLanguage": 34,
     "PackageStrings": {
-        "Play": "Jugar",
-        "Question": "Pregunta",
-        "Settings": "Ajustes",
-        "Online": "Multijugador",
-        "QuitGame": "¿Estás seguro de que quieres salir del juego?"
+      "Play": "Jugar",
+      "Question": "Pregunta",
+      "Settings": "Ajustes",
+      "Online": "Multijugador",
+      "QuitGame": "¿Estás seguro de que quieres salir del juego?"
     }
-}
-
-
-
-
+  }
 
 ]

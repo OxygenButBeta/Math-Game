@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class InLevelScript : PanelBehaviour
 {
@@ -24,6 +25,8 @@ public class InLevelScript : PanelBehaviour
     [SerializeField] TMP_Text QuestionText;
     [SerializeField] Animator animator;
     [SerializeField] TMP_Text LevelText;
+    [SerializeField] Image Logo;
+    [SerializeField] Image QuestionImage;
     #endregion
 
     private void Start()
@@ -73,9 +76,14 @@ public class InLevelScript : PanelBehaviour
     IEnumerator NextQuestion()
     {
         RotateCanvas();
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.2f);
         QuestionText.text = string.Empty;
+        QuestionImage.gameObject.SetActive(false);
+
+        Logo.enabled = true;
         yield return new WaitForSeconds(0.60f);
+        Logo.enabled = false;
+
         ReFreshPanel();
     }
     public override void CheckArgument(object args)
@@ -87,7 +95,18 @@ public class InLevelScript : PanelBehaviour
     public override void ReFreshPanel()
     {
         LevelText.text = LanguageManager.GetText("Question") + " " + (CurrentquestionIndex + 1);
-        QuestionText.text = CurrentQuestion.QuestionString;
+        if (CurrentQuestion.QuestionString[0] != '@')
+        {
+            QuestionText.text = CurrentQuestion.QuestionString;
+            QuestionText.gameObject.SetActive(true);
+            QuestionImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            QuestionText.gameObject.SetActive(false);
+            QuestionImage.gameObject.SetActive(true);
+            QuestionImage.sprite = Resources.Load<Sprite>(CurrentQuestion.QuestionString.Substring(1));
+        }
         inputfield.ResetAnswer();
     }
     public override void AfterOpening()

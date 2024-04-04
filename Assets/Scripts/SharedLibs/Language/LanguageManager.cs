@@ -82,7 +82,7 @@ public static class LanguageManager
         if (currentLanguageIndex == -1)
         {
             currentLanguageIndex = 0;
-            Debug.LogError("Could not find the language: " + language + " in the language packages.");
+            Debug.Log("Could not find the language: " + language + " in the language packages.");
         }
         SavedLanguage = language;
         FetchAllInScene();

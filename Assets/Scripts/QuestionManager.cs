@@ -5,11 +5,13 @@ using UnityEngine.Networking;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
+using Assets.Scripts.SharedLibs;
 
 public static class QuestionManager
 {
     static List<Question> m_questions;
     public static int QuestionCount => Questions.Count;
+    private static bool isEncrypted = false;
     public static int[] ComplatedQuestions
     {
         get
@@ -30,7 +32,11 @@ public static class QuestionManager
         {
             if (m_questions == null)
             {
-                m_questions = JsonConvert.DeserializeObject<List<Question>>(ReadJson());
+                if (isEncrypted)
+                    m_questions = JsonConvert.DeserializeObject<List<Question>>(ReadJson());
+                else
+                    m_questions = JsonConvert.DeserializeObject<List<Question>>(SumCrypto.DecryptString(ReadJson()));
+
                 Debug.Log("Total Number Of Questions " + m_questions.Count);
             }
             return m_questions;
