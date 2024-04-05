@@ -28,7 +28,7 @@ public class LevelSelector : PanelBehaviour
             AudioController.Instance.PlayAudio(AudioController.Audio.Load);
             Debug.Log("Opening Level " + QuestionID);
             OpenSingleOverride("inlevel", "MainMenu", QuestionID);
-            PanelController.SetActive("levels", false);
+            PanelController.SetActive("levelsmenu", false);
         });
         Sync();
 
