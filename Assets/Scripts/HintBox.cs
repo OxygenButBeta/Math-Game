@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using Assets.Scripts.SharedLibs;
 
 public class HintBox : PanelBehaviour
 {
