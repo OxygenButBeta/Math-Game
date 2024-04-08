@@ -5,7 +5,7 @@
       "Play": "Play",
       "Question": "Question",
       "Settings": "Settings",
-      "Online": "Multiplayer",
+      "Online": "Math Legends",
       "QuitGame": "Are you sure you want to exit the game?"
 
     }
@@ -16,7 +16,7 @@
       "Play": "Oyna",
       "Question": "Soru",
       "Settings": "Ayarlar",
-      "Online": "Çoklu Oyuncu",
+      "Online": "Matematik Efsaneleri",
       "QuitGame": "Oyundan çıkmak istediginize emin misiniz?"
     }
   },
@@ -26,7 +26,7 @@
       "Play": "Jouer",
       "Question": "Question",
       "Settings": "Paramètres",
-      "Online": "Multijoueur",
+      "Online": "Mathématiques légendes",
       "QuitGame": "Êtes-vous sûr de vouloir quitter le jeu?"
     }
   },
@@ -36,7 +36,7 @@
       "Play": "Играть",
       "Question": "Вопрос",
       "Settings": "Настройки",
-      "Online": "Мультиплеер",
+      "Online": "математика Легенды",
       "QuitGame": "Вы уверены, что хотите выйти из игры?"
     }
   },
@@ -46,7 +46,7 @@
       "Play": "Spielen",
       "Question": "Frage",
       "Settings": "Einstellungen",
-      "Online": "Mehrspieler",
+      "Online": "Legenden der Mathematik",
       "QuitGame": "Möchten Sie das Spiel wirklich beenden?"
     }
   },
@@ -56,7 +56,7 @@
       "Play": "Gioca",
       "Question": "Domanda",
       "Settings": "Impostazioni",
-      "Online": "Multigiocatore",
+      "Online": "leggende della matematica",
       "QuitGame": "Sei sicuro di voler uscire dal gioco?"
     }
   },
@@ -66,7 +66,7 @@
       "Play": "Jugar",
       "Question": "Pregunta",
       "Settings": "Ajustes",
-      "Online": "Multijugador",
+      "Online": "leyendas matemáticas",
       "QuitGame": "¿Estás seguro de que quieres salir del juego?"
     }
   }
