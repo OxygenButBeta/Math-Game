@@ -15,14 +15,10 @@ public class BaseLoader : MonoBehaviour
         {
             IsFirst.Set("1");
             LanguageManager.SetLanguage(Application.systemLanguage);
-            Debug.Log("First Time");
         }
-        Invoke("ToMainScene", 1.1f);
-    }
-    private void Update()
-    {
         Application.targetFrameRate = 60;
+        Invoke("ToMainScene", 1.1f);
+        SceneManager.LoadScene("Main");
     }
-    void EnableLoader() => Loading.SetActive(true);
-    void ToMainScene() => SceneManager.LoadScene("Main");
+
 }
