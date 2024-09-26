@@ -18,7 +18,7 @@ public class BaseLoader : MonoBehaviour
         }
         Application.targetFrameRate = 60;
         Invoke("ToMainScene", 1.1f);
-        SceneManager.LoadScene("Main");
-    }
 
+    }
+    void ToMainScene() => SceneManager.LoadScene("Main");
 }
